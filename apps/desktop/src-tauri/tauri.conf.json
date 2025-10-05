@@ -1,0 +1,27 @@
+{
+  "package": {
+    "productName": "Local TA",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "windows": [
+      {
+        "title": "Local TA",
+        "width": 1100,
+        "height": 720
+      }
+    ],
+    "bundle": {
+      "active": true,
+      "targets": "all"
+    }
+  },
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:5173",
+    "distDir": "dist"
+  }
+}
+
+
