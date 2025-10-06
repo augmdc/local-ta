@@ -1,60 +1,49 @@
 from __future__ import annotations
 
 import hashlib
-import os
 from pathlib import Path
-from typing import BinaryIO, Tuple
+from typing import BinaryIO
 
 SAFE_CHARS = "-_.() abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+REPO_ROOT = Path(__file__).resolve().parents[3]
+UPLOADS_DIR = REPO_ROOT / "storage" / "uploads"
+RUBRICS_DIR = REPO_ROOT / "storage" / "rubrics"
 
 
 def get_repo_root() -> Path:
-    # backend/app/utils/storage.py -> repo root is parents[3]
-    return Path(__file__).resolve().parents[3]
+    return REPO_ROOT
 
 
-def get_storage_dir() -> Path:
-    return get_repo_root() / "storage" / "uploads"
+def _ensure_dir(path: Path) -> Path:
+    path.mkdir(parents=True, exist_ok=True)
+    return path
 
 
 def ensure_storage_dirs() -> Path:
-    uploads = get_storage_dir()
-    uploads.mkdir(parents=True, exist_ok=True)
-    return uploads
-
-
-def get_rubrics_dir() -> Path:
-    return get_repo_root() / "storage" / "rubrics"
+    return _ensure_dir(UPLOADS_DIR)
 
 
 def ensure_rubrics_dir() -> Path:
-    rubrics = get_rubrics_dir()
-    rubrics.mkdir(parents=True, exist_ok=True)
-    return rubrics
+    return _ensure_dir(RUBRICS_DIR)
 
 
 def sanitize_filename(filename: str) -> str:
-    return "".join(c for c in filename if c in SAFE_CHARS) or "upload.bin"
+    cleaned = "".join(c for c in filename if c in SAFE_CHARS)
+    return cleaned or "upload.bin"
 
 
-def compute_sha256(path: Path, chunk_size: int = 1024 * 1024) -> str:
+def compute_sha256(path: Path, chunk_size: int = 1 << 20) -> str:
     sha = hashlib.sha256()
-    with path.open("rb") as f:
-        while True:
-            chunk = f.read(chunk_size)
-            if not chunk:
-                break
+    with path.open("rb") as src:
+        for chunk in iter(lambda: src.read(chunk_size), b""):
             sha.update(chunk)
     return sha.hexdigest()
 
 
-def save_upload(stream: BinaryIO, dest_path: Path, chunk_size: int = 1024 * 1024) -> int:
-    bytes_written = 0
-    with dest_path.open("wb") as out:
-        while True:
-            chunk = stream.read(chunk_size)
-            if not chunk:
-                break
-            out.write(chunk)
-            bytes_written += len(chunk)
-    return bytes_written
+def save_upload(stream: BinaryIO, dest_path: Path, chunk_size: int = 1 << 20) -> int:
+    size = 0
+    with dest_path.open("wb") as dst:
+        for chunk in iter(lambda: stream.read(chunk_size), b""):
+            dst.write(chunk)
+            size += len(chunk)
+    return size
