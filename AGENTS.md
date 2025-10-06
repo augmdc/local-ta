@@ -1,0 +1,24 @@
+# Tech Stack
+The stack you will using will be the following:
+
+Backend: FastAPI (Python)
+UI: Tauri (React)
+LLM runtime: Ollama (localhost REST)
+Default model: Qwen2.5-7B-Instruct (via Ollama)
+Embeddings: nomic-embed-text (via Ollama)
+Vector store: SQLite + sqlite-vec
+Parsing/OCR: Tesseract + Camelot (for tables in PDFs)
+RAG framework: LlamaIndex
+HITL orchestration: LangGraph
+Validation/guardrails: Guardrails (JSON/Pydantic)
+Packaging: Docker Compose (Ollama); Tauri bundler
+Security: SQLCipher (optional), localhost-only ports, OS firewall
+Evals: Ragas (core); TruLens (optional)
+Logging/audit: JSON logs + SQLite audit table
+Config: .env + YAML (models/chunking/policies)
+Testing: pytest
+OS targets: macOS, Windows, Linux
+
+
+# Common commands
+"Run the app" = In sequence, run the backend server, then run the UI (Tauri).
