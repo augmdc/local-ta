@@ -10,7 +10,7 @@ from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+PROJECT_ROOT = Path(__file__).resolve().parents[4]
 
 
 class Settings(BaseSettings):
@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     embedding_model: str = Field(default="nomic-embed-text")
 
     # Database
-    db_path: str = Field(default=str(PROJECT_ROOT / "backend/app/db/sqlite/localta.db"))
+    db_path: str = Field(default=str(PROJECT_ROOT / "storage/app.db"))
 
     # Optional external YAML config that can override fields
     app_config_path: str = Field(default=str(PROJECT_ROOT / "configs/app.yaml"))

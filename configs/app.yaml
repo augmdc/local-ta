@@ -1,15 +1,20 @@
-# YAML overrides for Settings; keys match Settings fields.
-environment: development
-api_prefix: /api
-log_level: INFO
-ollama_base_url: http://localhost:11434
-default_model: qwen2.5:7b-instruct
-embedding_model: nomic-embed-text
-
 # Application configuration for local-ta
 # Models can be overridden via environment variables:
 #   DEFAULT_MODEL, EMBED_MODEL, OLLAMA_HOST
 
+environment: development
+api_prefix: /api
+log_level: INFO
+
+# Ollama configuration
+ollama_base_url: http://localhost:11434
+default_model: qwen2.5:7b-instruct
+embedding_model: nomic-embed-text
+
+# Database
+db_path: storage/app.db
+
+# Legacy nested format (also supported)
 server:
   ollama_host: "http://127.0.0.1:11434"
 

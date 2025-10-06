@@ -1,0 +1,14 @@
+/Users/augmdc/Documents/GitHub/local-ta/apps/desktop/src-tauri/target/debug/deps/serde-4c7f2097881a0ad7.d: /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/augmdc/Documents/GitHub/local-ta/apps/desktop/src-tauri/target/debug/build/serde-35ba4472f2ee923c/out/private.rs
+
+/Users/augmdc/Documents/GitHub/local-ta/apps/desktop/src-tauri/target/debug/deps/libserde-4c7f2097881a0ad7.rlib: /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/augmdc/Documents/GitHub/local-ta/apps/desktop/src-tauri/target/debug/build/serde-35ba4472f2ee923c/out/private.rs
+
+/Users/augmdc/Documents/GitHub/local-ta/apps/desktop/src-tauri/target/debug/deps/libserde-4c7f2097881a0ad7.rmeta: /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/augmdc/Documents/GitHub/local-ta/apps/desktop/src-tauri/target/debug/build/serde-35ba4472f2ee923c/out/private.rs
+
+/Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/Users/augmdc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/Users/augmdc/Documents/GitHub/local-ta/apps/desktop/src-tauri/target/debug/build/serde-35ba4472f2ee923c/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/augmdc/Documents/GitHub/local-ta/apps/desktop/src-tauri/target/debug/build/serde-35ba4472f2ee923c/out

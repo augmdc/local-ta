@@ -12,8 +12,10 @@
       }
     ],
     "bundle": {
+      "identifier": "com.localta.app",
       "active": true,
-      "targets": "all"
+      "targets": "all",
+      "icon": []
     }
   },
   "build": {
